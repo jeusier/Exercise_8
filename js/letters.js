@@ -16,8 +16,24 @@ var counter = {
 }
 
 function countLetters(counter, sample_text){
-  // FIX ME
-}
+    var noSymbols = sample_text.replace(/[^a-zA-Z]/g, "");
+    var lowerCase = noSymbols.toLowerCase();
+    if(lowerCase.length > 0) {
+      var letter = lowerCase.substring(0,1);
+      lowerCase = lowerCase.substring(1,lowerCase.length);
+      counter[letter]++;
+      console.log(counter);
+      countLetters(counter, lowerCase);
+    }
+
+  }
+
+
+
+
+
+
+
 
 $(document).ready(function(){
   countLetters(counter, sample_text);

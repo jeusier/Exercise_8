@@ -18,6 +18,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
       "u" : 0,  "v" : 0,  "w" : 0,  "x" : 0,
       "y" : 0,  "z" : 0
     };
+
+    countLetters(counter, sample_text);
     
     expect(counter["a"]).toBe(29);
   });
